@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import React, { useState } from "react";
+import PokeInfo from "./components/PokeInfo";
+import PokeList from "./components/PokeList";
 import './App.css';
 
 function App() {
+  const [pokemon, setPokemon] = useState({
+    name: "bulbasaur", //default PokeInfo load the first pokemon name and url
+    url: "https://pokeapi.co/api/v2/pokemon/1/"
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="">
+      <div className="row">
+        <div className="col-12">
+          <PokeInfo pokemons={pokemon} />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-12">
+          <PokeList onPokemonClick={setPokemon} />
+        </div>
+      </div>
+
+
+
     </div>
   );
 }

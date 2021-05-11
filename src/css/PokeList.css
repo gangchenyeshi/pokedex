@@ -1,0 +1,19 @@
+.pokemon-List {
+    padding-top: 284px;
+    background-color: rgb(173, 166, 147);
+    width: 100%;
+}
+.pokeThumb {
+}
+.pokemonListButton {
+    position: fixed;
+    top: 254px;
+    width: 100%;
+
+}
+.pokemonListButtonsContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+}
